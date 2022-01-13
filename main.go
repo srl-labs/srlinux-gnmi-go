@@ -22,8 +22,8 @@ func main() {
 
 		Insecure:   boolP(false), // srlinux uses tls secured gnmi connection
 		SkipVerify: boolP(true),  // don't check certification validity
-		// Gzip:       boolP(false),
-		Timeout: 30 * time.Second,
+		Gzip:       boolP(false),
+		Timeout:    30 * time.Second,
 	}
 
 	ctx, cancel := context.WithCancel(context.Background())
